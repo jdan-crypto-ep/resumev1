@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ingeniero Geólogo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="space-bg" id="spaceBg"></div>
+
+    <nav>
+        <div style="font-weight: bold; font-size: 1.2rem;">Portfolio</div>
+        <div class="nav-links">
+            <a href="#acerca" class="nav-link">Acerca de Mí</a>
+            <a href="#proyectos" class="nav-link">Proyectos</a>
+            <a href="#habilidades" class="nav-link">Habilidades</a>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+    </nav>
+
+    <header>
+        <img src="img/foto.jpeg" alt="Foto Profesional" class="profile-img">
+        <h1>Juan Perez</h1>
+        <p class="subtitle">Ingeniero Geólogo Especializado en Análisis SIG y Datos Ambientales</p>
+        <div class="cta-buttons">
+            <a href="#proyectos" class="btn btn-primary">
+                <i class="fas fa-rocket"></i> Ver Proyectos
+            </a>
+            <a href="#" class="btn btn-secondary">
+                <i class="fas fa-download"></i> Descargar CV
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="btn btn-secondary">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com" target="_blank" class="btn btn-secondary">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </header>
+
+    <section id="acerca">
+        <h2>Acerca de Mí</h2>
+        <div class="about-content">
+            <p>Soy un Ingeniero Geólogo apasionado por la integración de tecnologías geoespaciales y análisis de datos
+                para resolver problemas ambientales y geológicos complejos. Con experiencia en Sistemas de Información
+                Geográfica (SIG) y análisis de datos, me especializo en transformar datos espaciales en información
+                valiosa para la toma de decisiones.</p>
+            <br>
+            <p>Mi enfoque combina conocimientos geológicos sólidos con habilidades técnicas en herramientas de código
+                abierto, permitiéndome desarrollar soluciones innovadoras y accesibles para proyectos ambientales, de
+                recursos naturales y ordenamiento territorial.</p>
+            <br>
+            <p>Busco oportunidades donde pueda aplicar mi experiencia en análisis SIG y ciencia de datos para contribuir
+                a proyectos que generen un impacto positivo en la gestión sostenible de recursos y el medio ambiente.
+            </p>
+        </div>
+    </section>
+
+    <section id="proyectos">
+        <h2>Proyectos Destacados</h2>
+        <div class="carousel-container">
+            <div class="carousel-wrapper" id="carouselWrapper">
+                <div class="carousel-slide">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1569163139394-de4798aa62b5?w=600&h=400&fit=crop"
+                            alt="Mapa de riesgo geológico" class="project-image">
+                        <div class="project-content">
+                            <h3>Análisis de Riesgo Geológico con QGIS</h3>
+                            <p><strong>Problema:</strong> Identificar zonas de alto riesgo de deslizamientos en área
+                                montañosa.</p>
+                            <p><strong>Enfoque:</strong> Análisis multicriterio combinando pendiente, litología,
+                                precipitación y uso de suelo.</p>
+                            <p><strong>Resultados:</strong> Mapa de susceptibilidad con 85% de precisión validado con
+                                eventos históricos.</p>
+                            <div class="project-tools">
+                                <span class="tool-tag">QGIS</span>
+                                <span class="tool-tag">Python</span>
+                                <span class="tool-tag">PostGIS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Repositorio</a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
+                            alt="Dashboard de calidad de agua" class="project-image">
+                        <div class="project-content">
+                            <h3>Dashboard de Calidad de Agua con Python</h3>
+                            <p><strong>Problema:</strong> Monitoreo de parámetros de calidad de agua en cuenca
+                                hidrográfica.</p>
+                            <p><strong>Enfoque:</strong> Automatización de análisis estadístico y visualización
+                                interactiva de datos temporales.</p>
+                            <p><strong>Resultados:</strong> Sistema de alertas tempranas y reportes automáticos para
+                                gestión hídrica.</p>
+                            <div class="project-tools">
+                                <span class="tool-tag">Python</span>
+                                <span class="tool-tag">Pandas</span>
+                                <span class="tool-tag">Matplotlib</span>
+                                <span class="tool-tag">Seaborn</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Repositorio</a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=600&h=400&fit=crop"
+                            alt="Mapeo de recursos minerales" class="project-image">
+                        <div class="project-content">
+                            <h3>Mapeo de Recursos Minerales con GRASS GIS</h3>
+                            <p><strong>Problema:</strong> Identificación de zonas potenciales para exploración mineral.
+                            </p>
+                            <p><strong>Enfoque:</strong> Integración de datos geológicos, geofísicos y geoquímicos
+                                mediante análisis espacial.</p>
+                            <p><strong>Resultados:</strong> Reducción del 40% en área de exploración con mayor
+                                probabilidad de éxito.</p>
+                            <div class="project-tools">
+                                <span class="tool-tag">GRASS GIS</span>
+                                <span class="tool-tag">R</span>
+                                <span class="tool-tag">PostgreSQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Repositorio</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop"
+                            alt="Proyecto 4" class="project-image">
+                        <div class="project-content">
+                            <h3>Análisis Espacial de Deforestación</h3>
+                            <p><strong>Problema:</strong> Cuantificar pérdida de cobertura forestal en región amazónica.
+                            </p>
+                            <p><strong>Enfoque:</strong> Procesamiento de imágenes satelitales y análisis temporal con
+                                machine learning.</p>
+                            <p><strong>Resultados:</strong> Identificación de 12 hotspots críticos y proyecciones para
+                                los próximos 5 años.</p>
+                            <div class="project-tools">
+                                <span class="tool-tag">Python</span>
+                                <span class="tool-tag">QGIS</span>
+                                <span class="tool-tag">Scikit-learn</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Repositorio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
+                            alt="Proyecto 5" class="project-image">
+                        <div class="project-content">
+                            <h3>Modelado 3D de Acuíferos</h3>
+                            <p><strong>Problema:</strong> Visualizar distribución espacial de recursos hídricos
+                                subterráneos.</p>
+                            <p><strong>Enfoque:</strong> Integración de datos de pozos y modelado geoestadístico en 3D.
+                            </p>
+                            <p><strong>Resultados:</strong> Modelo interactivo para planificación de extracción
+                                sostenible.</p>
+                            <div class="project-tools">
+                                <span class="tool-tag">R</span>
+                                <span class="tool-tag">QGIS</span>
+                                <span class="tool-tag">PostgreSQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Repositorio</a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop"
+                            alt="Proyecto 6" class="project-image">
+                        <div class="project-content">
+                            <h3>Sistema de Monitoreo Sísmico en Tiempo Real</h3>
+                            <p><strong>Problema:</strong> Procesamiento y visualización de datos sísmicos para alertas
+                                tempranas.</p>
+                            <p><strong>Enfoque:</strong> Pipeline automatizado de datos y dashboard interactivo.</p>
+                            <p><strong>Resultados:</strong> Reducción del 70% en tiempo de respuesta ante eventos
+                                sísmicos.</p>
+                            <div class="project-tools">
+                                <span class="tool-tag">Python</span>
+                                <span class="tool-tag">Plotly</span>
+                                <span class="tool-tag">PostgreSQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Repositorio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button class="carousel-btn" id="prevBtn" onclick="moveCarousel(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn" id="nextBtn" onclick="moveCarousel(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="carousel-indicators" id="indicators"></div>
+        </div>
+
+        <div class="more-projects-btn">
+            <a href="#" class="btn btn-primary">
+                <i class="fas fa-folder-open"></i> Ver Más Proyectos
+            </a>
+        </div>
+    </section>
+
+    <section id="habilidades">
+        <h2>Habilidades y Herramientas</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3><i class="fas fa-map-marked-alt"></i> Sistemas de Información Geográfica</h3>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check-circle"></i> QGIS</li>
+                    <li><i class="fas fa-check-circle"></i> GRASS GIS</li>
+                    <li><i class="fas fa-check-circle"></i> ArcGIS PRO</li>
+                    <li><i class="fas fa-check-circle"></i> SAGA GIS</li>
+                    <li><i class="fas fa-check-circle"></i> Global Mapper</li>
+                </ul>
+                <div class="skill-icons">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/QGIS_logo_new.svg" alt="QGIS"
+                        class="skill-icon" title="QGIS">
+                    <img src="https://www.esri.com/content/dam/esrisites/en-us/common/icons/product-logos/ArcGIS-Pro.png"
+                        alt="ArcGIS" class="skill-icon" title="ArcGIS">
+                    <img src="https://sagagis.com/wp-content/uploads/2025/09/logo_saga_big.png" alt="ArcGIS"
+                        class="skill-icon" title="SAGA">
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-chart-line"></i> Análisis de Datos</h3>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check-circle"></i> Python (NumPy, Pandas)</li>
+                    <li><i class="fas fa-check-circle"></i> Excel</li>
+                    <li><i class="fas fa-check-circle"></i> Jupyter Notebooks</li>
+                    <li><i class="fas fa-check-circle"></i> Geopandas</li>
+
+                </ul>
+                <div class="skill-icons">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python"
+                        class="skill-icon" title="Python">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Microsoft_Office_Excel_%282019%E2%80%932025%29.svg/960px-Microsoft_Office_Excel_%282019%E2%80%932025%29.svg.png"
+                        alt="Excel" class="skill-icon" title="Excel">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" alt="Jupyter"
+                        class="skill-icon" title="Jupyter">
+
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-chart-bar"></i> Visualización de Datos</h3>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check-circle"></i> Power BI</li>
+                    <li><i class="fas fa-check-circle"></i> Matplotlib</li>
+                    <li><i class="fas fa-check-circle"></i> Seaborn</li>
+
+                </ul>
+                <div class="skill-icons">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/500px-New_Power_BI_Logo.svg.png"
+                        alt="PoWerBI" class="skill-icon" title="PoWerBI">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Matplotlib_icon.svg/3840px-Matplotlib_icon.svg.png"
+                        alt="Matplotlib" class="skill-icon" title="Matplotlib">
+                    <img src="https://cdn.worldvectorlogo.com/logos/seaborn-1.svg" alt="Tableau" class="skill-icon"
+                        title="Tableau">
+
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-database"></i> Bases de Datos</h3>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check-circle"></i> PostgreSQL</li>
+                    <li><i class="fas fa-check-circle"></i> PostGIS</li>
+                    <li><i class="fas fa-check-circle"></i> SQLite/SpatiaLite</li>
+                    <li><i class="fas fa-check-circle"></i> MySQL</li>
+                </ul>
+                <div class="skill-icons">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg"
+                        alt="PostgreSQL" class="skill-icon" title="PostgreSQL">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Logo_square_postgis.png/640px-Logo_square_postgis.png"
+                        alt="PostGIS" class="skill-icon" title="PostGIS">
+                    <img src="https://icon2.cleanpng.com/20180715/fos/aaveiw5x1.webp" alt="MySQL" class="skill-icon"
+                        title="MySQL">
+
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-tools"></i> Software de Ingeniería</h3>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check-circle"></i> AutoCAD</li>
+                    <li><i class="fas fa-check-circle"></i> Iber</li>
+                    <li><i class="fas fa-check-circle"></i> Hec-RAS </li>
+                    <li><i class="fas fa-check-circle"></i> Surfer</li>
+                </ul>
+                <div class="skill-icons">
+                    <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/autocad-icon.png"
+                        alt="AutoCAD" class="skill-icon" title="AutoCAD">
+                    <img src="https://www.iberaula.es/cvdata/cntr2/spc21/dtos/mdia/About-the-model/PT_Splash_Ibersplash.png"
+                        alt="Iber" class="skill-icon" title="Iber">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2vXBK8Pyk45KV_Lkii7KLJipGOzm1mgKq7Q&s"
+                        alt="Hec-RAS" class="skill-icon" title="Hec-RAS">
+                    <img src="https://images.g2crowd.com/uploads/product/image/91ab311f30fa76587408489170d4624c/surfer.png"
+                        alt="SQLite" class="skill-icon" title="Surfer">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Tu Nombre. Todos los derechos reservados.</p>
+        <p style="margin-top: 0.5rem; color: var(--text-secondary);">
+            Construido con HTML, CSS y JavaScript
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
