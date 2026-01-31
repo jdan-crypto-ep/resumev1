@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Proyectos - Juan Perez</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* 1. Variables de colores (Igual que tu inicio) */
+        :root {
+            --bg-primary: #0a0e27;
+            --bg-secondary: #1a1f3a;
+            --text-primary: #e0e6ed;
+            --text-secondary: #a0a8b8;
+            --accent: #6366f1;
+            --accent-bright: #818cf8;
+            --card-bg: rgba(26, 31, 58, 0.7);
+        }
+
+        /* 2. Estilos base */
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 3. Navegación simplificada */
+        nav {
+            background: rgba(10, 14, 39, 0.95);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--accent);
+            z-index: 1000;
+        }
+
+        .nav-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-bright);
+        }
+
+        /* 4. Grid de Proyectos */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--accent-bright);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Tarjeta de proyecto (Copiada de tu estilo original) */
+        .project-card {
+            background: var(--bg-secondary);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tool-tag {
+            background: rgba(99, 102, 241, 0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            color: var(--accent-bright);
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div style="font-size: 1.2rem; font-weight: bold;">Mis Proyectos</div>
+        <a href="index.html" class="nav-link"><i class="fas fa-arrow-left"></i> Volver al Inicio</a>
+    </nav>
+
+    <div class="container">
+        <h1>Galería Completa</h1>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1569163139394-de4798aa62b5?w=600" class="project-image">
+                <div class="project-content">
+                    <h3>Análisis de Riesgo QGIS</h3>
+                    <p>Identificación de zonas de alto riesgo de deslizamientos mediante análisis multicriterio.</p>
+                    <div class="project-tools">
+                        <span class="tool-tag">QGIS</span>
+                        <span class="tool-tag">Python</span>
+                    </div>
+                    <a href="#" class="btn">Ver detalles &rarr;</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600" class="project-image">
+                <div class="project-content">
+                    <h3>Dashboard Hidrológico</h3>
+                    <p>Monitoreo de calidad de agua en tiempo real con alertas automatizadas.</p>
+                    <div class="project-tools">
+                        <span class="tool-tag">Python</span>
+                        <span class="tool-tag">Pandas</span>
+                    </div>
+                    <a href="#" class="btn">Ver detalles &rarr;</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
