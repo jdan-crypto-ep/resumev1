@@ -1,5 +1,6 @@
 let currentSlide = 0;
-const totalSlides = 3;
+// MODIFICACIÓN: Ya no fijamos el número en 3. Lo dejamos en 0 y lo calculamos abajo.
+let totalSlides = 0;
 
 // Crear fondo espacial dinámico
 function createSpaceBackground() {
@@ -165,6 +166,9 @@ function createNeuralNetworks(container) {
 
 // Carrusel
 function moveCarousel(direction) {
+    // Si no hay slides, no hacemos nada
+    if (totalSlides === 0) return;
+
     currentSlide += direction;
     if (currentSlide < 0) currentSlide = 0;
     if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
@@ -174,11 +178,16 @@ function moveCarousel(direction) {
 
 function updateCarousel() {
     const wrapper = document.getElementById('carouselWrapper');
+    if (!wrapper) return;
+
     wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
 
-    // Actualizar botones
-    document.getElementById('prevBtn').disabled = currentSlide === 0;
-    document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    // Actualizar botones (con protección por si no existen en el HTML)
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    if (prevBtn) prevBtn.disabled = currentSlide === 0;
+    if (nextBtn) nextBtn.disabled = currentSlide === totalSlides - 1;
 
     // Actualizar indicadores
     updateIndicators();
@@ -186,6 +195,10 @@ function updateCarousel() {
 
 function createIndicators() {
     const container = document.getElementById('indicators');
+    if (!container) return;
+
+    container.innerHTML = ''; // Limpiamos indicadores viejos por si acaso
+
     for (let i = 0; i < totalSlides; i++) {
         const indicator = document.createElement('div');
         indicator.className = 'indicator';
@@ -250,8 +263,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Inicializar
-createSpaceBackground();
-createIndicators();
-updateCarousel();
-document.querySelector('section').classList.add('active');
+// Inicialización
+function init() {
+    createSpaceBackground();
+
+    // MODIFICACIÓN IMPORTANTE: Contamos las slides DESPUÉS de que se hayan generado
+    const slides = document.querySelectorAll('.carousel-slide');
+    totalSlides = slides.length;
+
+    if (totalSlides > 0) {
+        createIndicators();
+        updateCarousel();
+    }
+
+    // Activar la primera sección visible
+    const firstSection = document.querySelector('section');
+    if (firstSection) firstSection.classList.add('active');
+}
+
+// Ejecutar cuando todo esté cargado
+document.addEventListener('DOMContentLoaded', init);
+// Por si acaso el script corre después del DOMContentLoaded (común al usar 'defer' o ponerlo al final)
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    init();
+}
